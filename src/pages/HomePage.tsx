@@ -3,33 +3,29 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
-import "../styles/HomePageStyles.css";
 
 const HomePage = () => {
-  // Set up animation on scroll effect with proper cleanup
+  // Set up animation on scroll effect
   useEffect(() => {
-    const handleScroll = () => {
-      const animatedElements = document.querySelectorAll('.animate-on-scroll');
-      
-      animatedElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const isInViewport = rect.top <= window.innerHeight * 0.8;
-        
-        if (isInViewport) {
-          el.classList.add('animated');
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
         }
       });
-    };
+    }, { threshold: 0.1 });
     
-    // Initial check
-    handleScroll();
+    animatedElements.forEach(el => {
+      observer.observe(el);
+    });
     
-    // Add event listener
-    window.addEventListener('scroll', handleScroll);
-    
-    // Cleanup function
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      animatedElements.forEach(el => {
+        observer.unobserve(el);
+      });
     };
   }, []);
   
@@ -52,13 +48,13 @@ const HomePage = () => {
               
               <div className="flex flex-wrap gap-4">
                 <Link to="/projects">
-                  <Button className="btn-primary group custom-cta-button">
+                  <Button className="btn-primary group">
                     View Projects
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="outline" className="btn-secondary custom-cta-button">
+                  <Button variant="outline" className="btn-secondary">
                     Contact Me
                   </Button>
                 </Link>
@@ -94,7 +90,7 @@ const HomePage = () => {
       {/* Featured Projects Section */}
       <section id="featured-projects" className="bg-background dark:bg-darkBlue py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
+          <div className="text-center mb-12 animate-on-scroll opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Check out some of my recent work that showcases my skills and passion for development.
@@ -105,8 +101,8 @@ const HomePage = () => {
             {[1, 2, 3].map((project) => (
               <div 
                 key={project} 
-                className="bg-card rounded-lg overflow-hidden border border-border shadow-md hover:shadow-lg transition-all duration-300 hover:shadow-neonBlue/20 animate-on-scroll project-card"
-                style={{ transitionDelay: `${project * 100}ms` }}
+                className="bg-card rounded-lg overflow-hidden border border-border shadow-md hover:shadow-lg transition-all duration-300 hover:shadow-neonBlue/20 animate-on-scroll opacity-0"
+                style={{ animationDelay: `${project * 100}ms` }}
               >
                 <div className="h-48 overflow-hidden">
                   <img 
@@ -160,7 +156,7 @@ const HomePage = () => {
       {/* Skills Overview */}
       <section className="bg-muted/30 dark:bg-muted/10 py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
+          <div className="text-center mb-12 animate-on-scroll opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Here are some of the technologies and tools I specialize in.
@@ -171,8 +167,8 @@ const HomePage = () => {
             {['React', 'JavaScript', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'GraphQL', 'Next.js', 'Tailwind CSS', 'PostgreSQL', 'Docker', 'AWS'].map((skill, index) => (
               <div 
                 key={skill}
-                className="bg-card rounded-lg p-4 text-center border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:border-neonBlue animate-on-scroll"
-                style={{ transitionDelay: `${index * 50}ms` }}
+                className="bg-card rounded-lg p-4 text-center border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:border-neonBlue animate-on-scroll opacity-0"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="bg-muted/50 dark:bg-muted w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center">
                   {/* Icon would go here */}
@@ -196,7 +192,7 @@ const HomePage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-neonBlue/10 to-skyBlue/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-on-scroll">
+          <div className="max-w-3xl mx-auto text-center animate-on-scroll opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Build Something Amazing Together</h2>
             <p className="text-lg text-muted-foreground mb-8">
               I'm currently available for freelance work and collaborations. 
@@ -215,7 +211,7 @@ const HomePage = () => {
       {/* Recent Blog Posts */}
       <section className="bg-background dark:bg-darkBlue py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
+          <div className="text-center mb-12 animate-on-scroll opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Recent Articles</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Read my thoughts on development, design, and technology.
@@ -227,8 +223,8 @@ const HomePage = () => {
               <Link 
                 to={`/blog/${blog}`} 
                 key={blog}
-                className="bg-card rounded-lg overflow-hidden border border-border shadow-md transition-all duration-300 hover:shadow-neonBlue/20 animate-on-scroll blog-card"
-                style={{ transitionDelay: `${blog * 100}ms` }}
+                className="bg-card rounded-lg overflow-hidden border border-border shadow-md transition-all duration-300 hover:shadow-neonBlue/20 animate-on-scroll opacity-0"
+                style={{ animationDelay: `${blog * 100}ms` }}
               >
                 <div className="p-6">
                   <div className="text-xs text-muted-foreground mb-2">May {blog}, 2023</div>
