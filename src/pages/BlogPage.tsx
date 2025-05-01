@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ArrowRight } from 'lucide-react';
-import '../styles/BlogPageStyles.css';
 
 // Define Blog Post interface
 interface BlogPost {

@@ -1,7 +1,9 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import "../styles/HomePageStyles.css";
 
 const HomePage = () => {
   // Set up animation on scroll effect with proper cleanup
