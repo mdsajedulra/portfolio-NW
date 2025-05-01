@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from 'lucide-react';
-import '../styles/ProjectsPageStyles.css';
 
 // Define project interface
 interface Project {
