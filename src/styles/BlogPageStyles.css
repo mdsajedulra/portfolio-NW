@@ -1,0 +1,61 @@
+
+/* Blog page specific styles */
+
+/* Blog card hover effects */
+.blog-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  border-color: #3F8EFC;
+  box-shadow: 0 10px 15px -3px rgba(63, 142, 252, 0.2);
+}
+
+/* Blog category tag */
+.blog-category {
+  background-color: rgba(63, 142, 252, 0.1);
+  color: #3F8EFC;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Blog read more link */
+.read-more {
+  color: #3F8EFC;
+  transition: transform 0.2s ease;
+}
+
+.read-more:hover .icon {
+  transform: translateX(4px);
+}
+
+/* Search input */
+.search-input {
+  padding-left: 2.25rem;
+}
+
+/* Filter button styles */
+.filter-button {
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  border-color: #3F8EFC;
+}
+
+.filter-button.active {
+  background-color: #3F8EFC;
+  color: white;
+}
+
+/* Hero gradient for blog page */
+.hero-gradient {
+  background: linear-gradient(to right top, #0A0A23, transparent);
+}
+
+/* Newsletter section */
+.newsletter-section {
+  background-image: linear-gradient(to right, rgba(63, 142, 252, 0.1), rgba(0, 224, 255, 0.1));
+}

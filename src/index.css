@@ -73,33 +73,4 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-
-  /* Custom Classes */
-  .hero-gradient {
-    @apply bg-gradient-to-tr from-darkBlue via-background to-background dark:from-darkBlue dark:via-darkBlue dark:to-background;
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-neonBlue to-skyBlue dark:from-neonBlue dark:to-aquaGreen;
-  }
-
-  .section-container {
-    @apply container mx-auto px-4 md:px-8 py-12 md:py-24;
-  }
-  
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 md:mb-10;
-  }
-
-  .btn-primary {
-    @apply px-6 py-3 bg-neonBlue text-white rounded-md transition-all hover:bg-purpleTint focus:ring-2 focus:ring-offset-2 focus:ring-neonBlue;
-  }
-
-  .btn-secondary {
-    @apply px-6 py-3 bg-transparent border border-neonBlue text-neonBlue dark:text-white rounded-md transition-all hover:bg-neonBlue/10 focus:ring-2 focus:ring-offset-2 focus:ring-neonBlue;
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:shadow-neonBlue/20 dark:hover:shadow-neonBlue/10;
-  }
 }

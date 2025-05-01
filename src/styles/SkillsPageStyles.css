@@ -1,0 +1,59 @@
+
+/* Skills page specific styles */
+
+/* Skill item hover effects */
+.skill-item {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-item:hover {
+  border-color: #3F8EFC;
+}
+
+/* Skill progress bar */
+.skill-progress-bg {
+  height: 0.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+/* Frontend skill progress */
+.frontend-progress {
+  background-image: linear-gradient(to right, #3F8EFC, #00E0FF);
+}
+
+/* Backend skill progress */
+.backend-progress {
+  background-image: linear-gradient(to right, #00E0FF, #2EFFC7);
+}
+
+/* Database skill progress */
+.database-progress {
+  background-image: linear-gradient(to right, #2EFFC7, #00E0FF);
+}
+
+/* DevOps skill progress */
+.devops-progress {
+  background-image: linear-gradient(to right, #7F5AF0, #3F8EFC);
+}
+
+/* Category icons */
+.skill-category-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+/* Hero gradient for skills page */
+.hero-gradient {
+  background: linear-gradient(to right top, #0A0A23, transparent);
+}
