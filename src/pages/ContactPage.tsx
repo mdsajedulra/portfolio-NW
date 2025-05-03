@@ -110,7 +110,7 @@ const ContactPage = () => {
                         href="mailto:info@example.com" 
                         className="text-muted-foreground hover:text-neonBlue transition-colors"
                       >
-                        info@example.com
+                        mdsajedulra@gmail.com
                       </a>
                     </div>
                   </div>
@@ -122,12 +122,12 @@ const ContactPage = () => {
                     <div>
                       <h3 className="text-lg font-medium mb-1">GitHub</h3>
                       <a 
-                        href="https://github.com/username" 
+                        href="https://github.com/mdsajedulra@gmail.com" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-neonBlue transition-colors"
                       >
-                        github.com/username
+                        github.com/mdsajedulra
                       </a>
                     </div>
                   </div>
@@ -139,12 +139,12 @@ const ContactPage = () => {
                     <div>
                       <h3 className="text-lg font-medium mb-1">LinkedIn</h3>
                       <a 
-                        href="https://linkedin.com/in/username" 
+                        href="https://linkedin.com/in/mdsajedulra" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-neonBlue transition-colors"
                       >
-                        linkedin.com/in/username
+                        linkedin.com/in/mdsajedulra
                       </a>
                     </div>
                   </div>

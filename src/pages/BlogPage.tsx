@@ -23,60 +23,73 @@ const BlogPage = () => {
   const blogPosts: BlogPost[] = [
     {
       id: 1,
-      title: "How to Build a React App with TypeScript",
-      excerpt: "A comprehensive guide to setting up and developing a React application with TypeScript for type-safe development.",
+      title: "Getting Started with React and Redux Toolkit",
+      excerpt: "Learn how to efficiently manage state in React apps using Redux Toolkit with modern best practices.",
       content: "Full content of the blog post...",
-      date: "May 10, 2023",
-      author: "John Doe",
+      date: "May 5, 2025",
+      author: "Md Sajedul Islam",
       category: "Development",
-      image: "https://images.unsplash.com/photo-1549972419867-af246d00abff?q=80&w=2000&auto=format&fit=crop",
-      readingTime: 8
-    },
-    {
-      id: 2,
-      title: "Modern CSS Techniques You Should Be Using",
-      excerpt: "Explore the latest CSS features and techniques that can streamline your workflow and enhance your designs.",
-      content: "Full content of the blog post...",
-      date: "April 22, 2023",
-      author: "John Doe",
-      category: "CSS",
-      image: "https://images.unsplash.com/photo-1550000000-abdcefabcdef?q=80&w=2000&auto=format&fit=crop",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       readingTime: 6
     },
     {
-      id: 3,
-      title: "Getting Started with Tailwind CSS",
-      excerpt: "Learn how to set up and start using Tailwind CSS in your projects for rapid UI development.",
+      id: 2,
+      title: "Form Handling in React with React Hook Form",
+      excerpt: "Discover how React Hook Form simplifies form validation and management in React applications.",
       content: "Full content of the blog post...",
-      date: "March 15, 2023",
-      author: "John Doe",
-      category: "CSS",
-      image: "https://images.unsplash.com/photo-1550000000-aboweatfdve?q=80&w=2000&auto=format&fit=crop",
+      date: "April 28, 2025",
+      author: "Md Sajedul Islam",
+      category: "Frontend",
+      image: "https://react-hook-form.com/images/logo.png",
       readingTime: 5
     },
     {
-      id: 4,
-      title: "State Management in React with Context API",
-      excerpt: "A deep dive into using React's Context API for state management in medium to large applications.",
+      id: 3,
+      title: "Build a REST API with Node.js, Express, and MongoDB",
+      excerpt: "Step-by-step tutorial to create a full-featured REST API using Express and MongoDB.",
       content: "Full content of the blog post...",
-      date: "February 28, 2023",
-      author: "John Doe",
+      date: "March 20, 2025",
+      author: "Md Sajedul Islam",
+      category: "Backend",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      readingTime: 7
+    },
+    {
+      id: 4,
+      title: "Introduction to TypeScript for JavaScript Developers",
+      excerpt: "Understand the basics of TypeScript and how it enhances your JavaScript coding experience.",
+      content: "Full content of the blog post...",
+      date: "February 10, 2025",
+      author: "Md Sajedul Islam",
       category: "Development",
-      image: "https://images.unsplash.com/photo-1550000000-abdcefabcdef?q=80&w=2000&auto=format&fit=crop",
-      readingTime: 10
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      readingTime: 4
     },
     {
       id: 5,
-      title: "Introduction to GraphQL for Frontend Developers",
-      excerpt: "Learn the basics of GraphQL and how it can improve your data fetching experience as a frontend developer.",
+      title: "Create Beautiful Websites Fast with Tailwind CSS",
+      excerpt: "Explore how Tailwind CSS makes frontend styling more flexible and faster to implement.",
       content: "Full content of the blog post...",
-      date: "January 12, 2023",
-      author: "John Doe",
-      category: "API",
-      image: "https://images.unsplash.com/photo-1550000000-abcdefabcdef?q=80&w=2000&auto=format&fit=crop",
-      readingTime: 7
+      date: "January 30, 2025",
+      author: "Md Sajedul Islam",
+      category: "Design",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      readingTime: 3
+    },
+    {
+      id: 6,
+      title: "WordPress Customization: Tips for Developers",
+      excerpt: "Learn how to customize WordPress themes and plugins to build powerful and unique websites.",
+      content: "Full content of the blog post...",
+      date: "January 12, 2025",
+      author: "Md Sajedul Islam",
+      category: "WordPress",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+      readingTime: 6
     }
   ];
+  
+  
   
   // State for search and category filter
   const [searchQuery, setSearchQuery] = useState<string>('');
