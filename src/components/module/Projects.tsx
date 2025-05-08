@@ -24,14 +24,14 @@ const Projects = () => {
       id: 1,
       title: "Book Shop App",
       description:
-        "A full-stack web application for browsing, purchasing, and managing books with secure login and payment via SurjoPay.",
+        "A full-stack web application for browsing, purchasing, and managing books with secure login and payment",
       technologies: [
         "React",
-        "Redux Toolkit",
-        "RTK Query",
+        "Redux",
+   
         "Node.js",
         "Express",
-        "MongoDB",
+
         "Mongoose",
       ],
       image: "https://i.ibb.co.com/2Ymgy97L/Screenshot-2025-05-01-113957.png",
@@ -39,16 +39,56 @@ const Projects = () => {
       demo: "https://tutor-client-amber.vercel.app/",
       category: "web",
       featured: true,
-      longDescription:
-        "A full-stack web application for browsing, purchasing, and managing books with secure login and payment via SurjoPay.",
+      longDescription: `
+        <h2>Project Overview</h2>
+<p><strong>Book Shop</strong> is a full-stack e-commerce application that allows users to browse, search, and purchase books online. It includes role-based access, secure payments, and admin product management features.</p>
+
+<h3>Key Features</h3>
+<ul>
+<li>User authentication with secure login/register</li>
+<li>Role-based access (Admin/User)</li>
+<li>Add to cart, checkout, and order history</li>
+<li>Payment integration using SurjoPay</li>
+<li>Admin panel for managing books, orders, and users</li>
+</ul>
+
+<h3>Technologies Used</h3>
+<ul>
+<li>Frontend: React, Redux Toolkit, Tailwind CSS</li>
+<li>Backend: Node.js, Express</li>
+<li>Database: MongoDB with Mongoose</li>
+<li>Payment: SurjoPay</li>
+</ul>
+
+        
+        `,
     },
     {
       id: 2,
       title: "Tutor Booking System",
       description:
         "A platform where students can book tutors, view booking status, and make payments if accepted.",
-      longDescription:
-        "A platform where students can book tutors, view booking status, and make payments if accepted.",
+      longDescription: `
+       
+
+   
+<p><strong>Tutor Link</strong> is an online tutor booking platform where students can easily find qualified tutors based on subject, location, and availability. It ensures secure communication and seamless scheduling between students and tutors.</p>
+
+<h3>Key Features</h3>
+<ul>
+<li>Student registration and tutor profile creation</li>
+<li>Booking system with status tracking (pending, accepted, rejected)</li>
+<li>Real-time messaging between student and tutor</li>
+<li>Payment gateway integration for accepted bookings</li>
+<li>Admin dashboard for user and booking management</li>
+</ul>
+
+
+
+       
+       
+       
+       `,
       technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
       image: "https://i.ibb.co.com/W4v0qyrR/Screenshot-2025-05-01-162407.png",
       github: "https://github.com/mdsajedulra/tutor_client",
@@ -61,12 +101,55 @@ const Projects = () => {
       title: "Blog Backend",
       description:
         "A personal portfolio website to showcase projects, skills, and contact details with a responsive layout.",
-      longDescription:
-        "A personal portfolio website to showcase projects, skills, and contact details with a responsive layout.",
+      longDescription: `
+        
+         <h2>📰 Blog Backend Project</h2>
+
+<p>
+This is a fully functional backend for a blogging platform, built using Node.js, Express, and MongoDB. The application is designed to handle user authentication, secure blog post management, and RESTful API communication with any frontend client. It uses industry-standard practices like JWT for authentication and bcrypt for password encryption. The backend supports multiple user roles (e.g., admin, author) and enables secure and scalable blog management.
+</p>
+
+<h3> Key Features</h3>
+<ul>
+<li> <strong>JWT Authentication:</strong> Secure login system using access tokens.</li>
+<li> <strong>User Management:</strong> Supports role-based users like admin and author.</li>
+<li> <strong>Blog CRUD:</strong> Authors can create, update, delete, and view blog posts.</li>
+<li> <strong>Hashed Passwords:</strong> User passwords are encrypted using bcrypt.</li>
+<li> <strong>CORS Enabled:</strong> Allows cross-origin frontend integration.</li>
+<li> <strong>Environment Variables:</strong> Secure configuration using dotenv.</li>
+</ul>
+
+<h3>🔌 API Endpoints</h3>
+
+<h4>Auth Routes</h4>
+<ul>
+<li><code>POST /api/register</code> - Register a new user.</li>
+<li><code>POST /api/login</code> - Authenticate and receive JWT token.</li>
+</ul>
+
+<h4>Blog Routes</h4>
+<ul>
+<li><code>GET /api/posts</code> - Retrieve all blog posts.</li>
+<li><code>GET /api/posts/:id</code> - Retrieve a single post by ID.</li>
+<li><code>POST /api/posts</code> - Create a new blog post (requires auth).</li>
+<li><code>PUT /api/posts/:id</code> - Update an existing post (auth + owner only).</li>
+<li><code>DELETE /api/posts/:id</code> - Delete a post (auth + owner only).</li>
+</ul>
+
+
+<h3>📌 Project Highlights</h3>
+<ul>
+<li>Production-ready backend with clean folder structure.</li>
+<li>Scalable API design for future features like comments, likes, categories.</li>
+<li>Frontend-friendly JSON responses for smooth integration.</li>
+</ul>
+
+              
+  `,
       technologies: ["HTML", "CSS", "JavaScript", "React"],
-      image: "https://i.ibb.co.com/W4v0qyrR/Screenshot-2025-05-01-162407.png",
-      github: "https://github.com/username/portfolio-site",
-      demo: "https://book-store-client-livid.vercel.app/",
+      image: "https://i.ibb.co.com/Q7x73Bxx/backend.jpg",
+      github: "https://github.com/mdsajedulra/Blog_Server",
+      demo: "https://assignment-03-blog-webiste-backend.vercel.app/",
       category: "Backend",
       featured: true,
     },

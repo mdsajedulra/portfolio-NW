@@ -113,7 +113,12 @@ const Navbar = () => {
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </Button>
-
+          
+          <Link  target="blank" to="https://drive.google.com/file/d/1er2gmjKn74lBjDavMaqQFSwquVg5D_np/view?usp=drive_link">
+            <Button>
+              RESUME <ArrowDownNarrowWide />
+            </Button>
+          </Link>
           <Button
             variant="ghost"
             size="icon"

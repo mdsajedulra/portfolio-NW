@@ -159,9 +159,9 @@ const ProjectDetailsPage = () => {
                 
     `,
         technologies: ["HTML", "CSS", "JavaScript", "React"],
-        image: "https://i.ibb.co.com/W4v0qyrR/Screenshot-2025-05-01-162407.png",
-        github: "https://github.com/username/portfolio-site",
-        demo: "https://book-store-client-livid.vercel.app/",
+        image: "https://i.ibb.co.com/Q7x73Bxx/backend.jpg",
+        github: "https://github.com/mdsajedulra/Blog_Server",
+        demo: "https://assignment-03-blog-webiste-backend.vercel.app/",
         category: "Backend",
         featured: true,
       },

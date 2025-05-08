@@ -101,7 +101,7 @@ const BlogPostPage = () => {
           <p>Using TypeScript with React provides numerous benefits, including better code quality, improved developer experience, and fewer runtime errors. While there's a learning curve, the long-term advantages make it worth the investment.</p>
         `,
         date: "May 10, 2023",
-        author: "John Doe",
+        author: "Md Sajedul Islam",
         authorImage: "https://images.unsplash.com/photo-1580518324401-8cueee64da10?q=80&w=400&auto=format&fit=crop",
         category: "Development",
         tags: ["React", "TypeScript", "Web Development", "JavaScript"],
